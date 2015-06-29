@@ -22,7 +22,7 @@
     <%= f.text_field :hours %>
   </p>
   <p>
-    <%= collection_select(:business, :type_id, Type.all, :id, :name) %>
+    <%= f.collection_select(:type_id, Type.all, :id, :name) %>
   </p>
   <p>
     <%= f.submit %>

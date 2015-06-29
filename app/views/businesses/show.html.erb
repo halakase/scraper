@@ -1,8 +1,8 @@
-<h1><%= @business.name %></h1>
+<h1><%= @business.name %><small class="muted"> <%= @type.name %></small></h1>
 <p><strong>Address: </strong><%= @business.address %></p>
 <p><strong>Phone: </strong><%= @business.phone %></p>
 <p><strong>Website: </strong><%= link_to @business.url, "http://#{@business.url}" %></p>
 <p><strong>Hours: </strong><%= @business.hours %></p>
-<%= link_to "Edit", edit_type_business_path(@type, @business) %> |
 <%= link_to "Back to #{@business.type.name}", type_path(@business.type) %> |
+<%= link_to "Edit", edit_type_business_path(@type, @business) %> |
 <%= link_to "Delete", type_business_path(@type, @business), data: { confirm: "Are you sure you want to delete #{@business.name}?", method: "delete"} %>

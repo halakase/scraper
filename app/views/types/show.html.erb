@@ -5,8 +5,8 @@
   <% end %>
 </ul>
 <p>
-  <%= link_to "Add Your Business", new_type_business_path(@type) %> |
   <%= link_to "Return to Types", types_path %> |
+  <%= link_to "Add Your Business", new_type_business_path(@type) %> |
   <%= link_to "Edit #{@type.name}", edit_type_path %> |
   <%= link_to "Delete #{@type.name}", type_path(@type),
                                       data: { confirm: "Are you sure you want to delete #{@type.name}?",
