@@ -22,6 +22,7 @@
     <%= f.text_field :hours %>
   </p>
   <p>
+    <%= f.label :type %>
     <%= f.collection_select(:type_id, Type.all, :id, :name) %>
   </p>
   <p>

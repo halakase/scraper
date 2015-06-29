@@ -21,3 +21,11 @@
 body {
   font-family: sans-serif;
 }
+
+input[type=text] {
+  border-style: none none solid none;
+}
+
+input:focus {
+  outline: none;
+}
