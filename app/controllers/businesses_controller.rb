@@ -35,6 +35,16 @@ class BusinessesController < ApplicationController
     end
   end
 
+  def destroy
+    @type = Type.find(params[:type_id])
+    @business = Business.find(params[:id])
+    if @business.destroy
+      redirect_to type_path(@type)
+    else
+      redirect_to type_business_path(@type, @business)
+    end
+  end
+
   private
 
   def business_params
