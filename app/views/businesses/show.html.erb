@@ -1,0 +1,5 @@
+<h1><%= @business.name %></h1>
+<p><strong>Address: </strong><%= @business.address %></p>
+<p><strong>Phone: </strong><%= @business.phone %></p>
+<p><strong>Website: </strong><%= link_to @business.url, "http://#{@business.url}" %></p>
+<p><strong>Hours: </strong><%= @business.hours %></p>

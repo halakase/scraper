@@ -14,6 +14,11 @@ class BusinessesController < ApplicationController
     end
   end
 
+  def show
+    @type = Type.find(params[:type_id])
+    @business = Business.find(params[:id])
+  end
+
   private
 
   def business_params
