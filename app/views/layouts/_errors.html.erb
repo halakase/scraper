@@ -1,7 +1,7 @@
-<% if @business.errors.any? %>
+<% if object.errors.any? %>
   <h3>:( Please fix these errors:</h3>
   <ul>
-    <% @business.errors.full_messages.each do |message| %>
+    <% object.errors.full_messages.each do |message| %>
       <li>
         <%= message %>
       </li>

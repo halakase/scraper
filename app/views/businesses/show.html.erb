@@ -3,3 +3,5 @@
 <p><strong>Phone: </strong><%= @business.phone %></p>
 <p><strong>Website: </strong><%= link_to @business.url, "http://#{@business.url}" %></p>
 <p><strong>Hours: </strong><%= @business.hours %></p>
+<%= link_to "Edit", edit_type_business_path(@type, @business) %> |
+<%= link_to "Back to #{@business.type.name}", type_path(@business.type) %>

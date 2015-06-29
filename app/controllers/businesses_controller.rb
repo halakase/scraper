@@ -19,6 +19,22 @@ class BusinessesController < ApplicationController
     @business = Business.find(params[:id])
   end
 
+  def edit
+    @type = Type.find(params[:type_id])
+    @business = Business.find(params[:id])
+    render :edit
+  end
+
+  def update
+    @type = Type.find(params[:type_id])
+    @business = Business.find(params[:id])
+    if @business.update(business_params)
+      redirect_to type_business_path(@type, @business)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def business_params
